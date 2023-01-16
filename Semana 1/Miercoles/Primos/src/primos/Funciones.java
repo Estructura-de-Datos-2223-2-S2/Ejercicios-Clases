@@ -10,6 +10,14 @@ public class Funciones {
     public Funciones(int tablero) {
         this.tablero = tablero;
     }
+
+    public int getTablero() {
+        return tablero;
+    }
+
+    public void setTablero(int tablero) {
+        this.tablero = tablero;
+    }
     
     
     
