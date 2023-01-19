@@ -14,18 +14,22 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         int option = sc.nextInt();
         Arrays arrays = new Arrays();
-        if (option == 1) {
-            // 0 1 1 2 3 5 8 13 21 ...
-            System.out.println("Please enter the max number");
-            int maxNumber = sc.nextInt();
-            Fibonacci fibo = new Fibonacci();
-            fibo.calculateFibo(maxNumber);
-        } else if (option == 2) {
-            arrays.valueCounter();
-        } else if (option == 3) {
-            System.out.println("Please enter a number");
-            String word = sc.next();
-            arrays.stringToArray(word);
+        switch (option) {
+            case 1 -> {
+                // 0 1 1 2 3 5 8 13 21 ...
+                System.out.println("Please enter the max number");
+                int maxNumber = sc.nextInt();
+                Fibonacci fibo = new Fibonacci();
+                fibo.calculateFibo(maxNumber);
+            }
+            case 2 -> arrays.valueCounter();
+            case 3 -> {
+                System.out.println("Please enter a number");
+                String word = sc.next();
+                arrays.stringToArray(word);
+            }
+            default -> {
+            }
         }
         
     
